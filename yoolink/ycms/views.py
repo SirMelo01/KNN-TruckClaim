@@ -713,7 +713,7 @@ def site_view_main_hero(request):
 
 # Main Site - Service Section
 @login_required(login_url='login')
-def site_view_main_hero(request):
+def site_view_main_service(request):
     data = {}
     if TextContent.objects.filter(name="main_service").exists():
         data["textContent"] = TextContent.objects.get(name='main_service')
