@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-14 14:41+0000\n"
+"POT-Creation-Date: 2025-03-16 09:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,20 +26,25 @@ msgstr "German"
 msgid "Englisch"
 msgstr "English"
 
+#: yoolink/templates/base.html:168
+msgid "NAVBAR_HOME"
+msgstr "Home"
+
+#: yoolink/templates/base.html:172
+msgid "NAVBAR_SERVICES"
+msgstr "Services"
+
+#: yoolink/templates/base.html:175
+msgid "NAVBAR_FAQ"
+msgstr "FAQ"
+
+#: yoolink/templates/base.html:178
+msgid "NAVBAR_CONTACT"
+msgstr "Contact"
+
 #: yoolink/templates/pages/cms/cms.html:14
 msgid "CMS_TITLE_IMAGE"
 msgstr "Images"
-
-#: yoolink/templates/pages/index.html:843
-msgid "FAQ_TITLE"
-msgstr "Frequently Asked Questions"
-
-#: yoolink/templates/pages/index.html:847
-msgid "FAQ_TEXT"
-msgstr ""
-"We are often asked the same questions, so we try to answer the most "
-"important ones here. If you have any further questions, feel free to contact "
-"us anytime."
 
 #: yoolink/users/admin.py:17
 msgid "Personal info"
@@ -68,3 +73,12 @@ msgstr ""
 #: yoolink/users/views.py:23
 msgid "Information successfully updated"
 msgstr ""
+
+#~ msgid "FAQ_TITLE"
+#~ msgstr "Frequently Asked Questions"
+
+#~ msgid "FAQ_TEXT"
+#~ msgstr ""
+#~ "We are often asked the same questions, so we try to answer the most "
+#~ "important ones here. If you have any further questions, feel free to "
+#~ "contact us anytime."

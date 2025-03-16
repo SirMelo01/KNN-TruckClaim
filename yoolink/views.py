@@ -35,32 +35,40 @@ def load_index(request):
     # Text Contents
     if TextContent.objects.filter(name="main_hero").exists():
         context["heroText"] = TextContent.objects.get(name='main_hero')
+    # Hero
+    if TextContent.objects.filter(name="main_hero_card_1").exists():
+        context["heroCard1"] = TextContent.objects.get(name='main_hero_card_1')
+    if TextContent.objects.filter(name="main_hero_card_2").exists():
+        context["heroCard2"] = TextContent.objects.get(name='main_hero_card_2')
+    if TextContent.objects.filter(name="main_hero_card_3").exists():
+        context["heroCard3"] = TextContent.objects.get(name='main_hero_card_3')
+    # Services
+    if TextContent.objects.filter(name="main_service").exists():
+        context["serviceText"] = TextContent.objects.get(name='main_service')
+    if TextContent.objects.filter(name="main_service_card_1").exists():
+        context["serviceCard1"] = TextContent.objects.get(name='main_service_card_1')
+    if TextContent.objects.filter(name="main_service_card_2").exists():
+        context["serviceCard2"] = TextContent.objects.get(name='main_service_card_2')
+    if TextContent.objects.filter(name="main_service_card_3").exists():
+        context["serviceCard3"] = TextContent.objects.get(name='main_service_card_3')
+    
+    # Calculation
+    if TextContent.objects.filter(name="main_calculation").exists():
+        context["calculationText"] = TextContent.objects.get(name='main_calculation')
+    if TextContent.objects.filter(name="main_calculation_card").exists():
+        context["calculationCardText"] = TextContent.objects.get(name='main_calculation_card')
+    if Galerie.objects.filter(place='main_calculation').exists():
+        context["calculationImages"] = Galerie.objects.get(place='main_calculation').images.all()
 
-    if TextContent.objects.filter(name="main_responsive").exists():
-        context["responsiveText"] = TextContent.objects.get(name='main_responsive')
+    if TextContent.objects.filter(name="main_faq").exists():
+        context["faqText"] = TextContent.objects.get(name='main_faq')
 
-    if TextContent.objects.filter(name="main_cms").exists():
-        context["cmsText"] = TextContent.objects.get(name='main_cms')
-
-    if TextContent.objects.filter(name="main_price").exists():
-        context["priceText"] = TextContent.objects.get(name='main_price')
-
-    if TextContent.objects.filter(name="main_team").exists():
-        context["teamText"] = TextContent.objects.get(name='main_team')
+    if TextContent.objects.filter(name="main_contact").exists():
+        context["contactText"] = TextContent.objects.get(name='main_contact')
 
     # Galery
-    if Galerie.objects.filter(place='main_hero').exists():
-        context["heroImages"] = Galerie.objects.get(place='main_hero').images.all()
-        
-    if Galerie.objects.filter(place='main_responsive_desktop').exists():
-        context['responsiveDesktopImages'] = Galerie.objects.get(place='main_responsive_desktop').images.all()
-        
-    if Galerie.objects.filter(place='main_responsive_handy').exists():
-        context['responsiveHandyImages'] = Galerie.objects.get(place='main_responsive_handy').images.all()
-
-    # Images
-    if fileentry.objects.filter(place='main_cms').exists():
-        context["cmsImage"] = fileentry.objects.get(place='main_cms')
+    if Galerie.objects.filter(place='main_calculation').exists():
+        context["calculationImages"] = Galerie.objects.get(place='main_calculation').images.all()
     
     # Mitarbeiter
     active_team_members = TeamMember.objects.filter(active=True)

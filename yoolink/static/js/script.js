@@ -38,7 +38,11 @@ $(document).ready(function () {
         const menu = $('#mobile-menu');
         menu.removeClass('hidden');
         $('#menu-toggle2').removeClass("hidden");
-        // Füge kleine Verzögerung hinzu, damit Tailwind die Animation erkennt
+    
+        // Body scroll verhindern
+        $('body').addClass('overflow-hidden');
+    
+        // Kleine Verzögerung für die Animation
         setTimeout(() => {
             menu.addClass('opacity-100').removeClass('opacity-0');
         }, 10);
@@ -49,11 +53,13 @@ $(document).ready(function () {
         const menu = $('#mobile-menu');
         menu.addClass('opacity-0').removeClass('opacity-100');
     
+        // Scrollen wieder erlauben
+        $('body').removeClass('overflow-hidden');
+    
         // Warte auf die Animation, dann verstecke das Menü
         setTimeout(() => {
             menu.addClass('hidden');
-        }, 300); // 300ms = Tailwind transition duration
-        
+        }, 300);
     }
     
     // Burger-Menü öffnen
@@ -64,7 +70,7 @@ $(document).ready(function () {
     // Menü schließen
     $('#menu-toggle2').on('click', function () {
         closeMenu();
-    });
+    });    
     
 
     // Banner anzeigen, wenn der Bildschirm auf Desktop-Größe erweitert wird

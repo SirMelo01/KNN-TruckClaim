@@ -702,49 +702,56 @@ def site_view_main_hero(request):
     data = {}
     if TextContent.objects.filter(name="main_hero").exists():
         data["textContent"] = TextContent.objects.get(name='main_hero')
-    if Galerie.objects.filter(place='main_hero').exists():
-        data["heroImages"] = Galerie.objects.get(place='main_hero').images.all()
+    if TextContent.objects.filter(name="main_hero_card_1").exists():
+        data["textCard1"] = TextContent.objects.get(name='main_hero_card_1')
+    if TextContent.objects.filter(name="main_hero_card_2").exists():
+        data["textCard2"] = TextContent.objects.get(name='main_hero_card_2')
+    if TextContent.objects.filter(name="main_hero_card_3").exists():
+        data["textCard3"] = TextContent.objects.get(name='main_hero_card_3')
         
     return render(request, "pages/cms/content/sites/mainsite/HeroContent.html", data)
 
+# Main Site - Service Section
 @login_required(login_url='login')
-def site_view_main_responsive(request):
+def site_view_main_hero(request):
     data = {}
-    if TextContent.objects.filter(name="main_responsive").exists():
-        data["textContent"] = TextContent.objects.get(name='main_responsive')
-
-    if Galerie.objects.filter(place='main_responsive_desktop').exists():
-        data['responsiveDesktopImages'] = Galerie.objects.get(place='main_responsive_desktop').images.all()
+    if TextContent.objects.filter(name="main_service").exists():
+        data["textContent"] = TextContent.objects.get(name='main_service')
+    if TextContent.objects.filter(name="main_service_card_1").exists():
+        data["textCard1"] = TextContent.objects.get(name='main_service_card_1')
+    if TextContent.objects.filter(name="main_service_card_2").exists():
+        data["textCard2"] = TextContent.objects.get(name='main_service_card_2')
+    if TextContent.objects.filter(name="main_service_card_3").exists():
+        data["textCard3"] = TextContent.objects.get(name='main_service_card_3')
         
-    if Galerie.objects.filter(place='main_responsive_handy').exists():
-        data['responsiveHandyImages'] = Galerie.objects.get(place='main_responsive_handy').images.all()
-
-    return render(request, "pages/cms/content/sites/mainsite/ResponsiveContent.html", data)
+    return render(request, "pages/cms/content/sites/mainsite/ServiceContent.html", data)
 
 @login_required(login_url='login')
-def site_view_main_cms(request):
+def site_view_main_faq(request):
     data = {}
-    if TextContent.objects.filter(name="main_cms").exists():
-        data["textContent"] = TextContent.objects.get(name='main_cms')
-    if fileentry.objects.filter(place='main_cms').exists():
-        data["cmsImage"] = fileentry.objects.get(place='main_cms')
+    if TextContent.objects.filter(name="main_faq").exists():
+        data["textContent"] = TextContent.objects.get(name='main_faq')
+        
+    return render(request, "pages/cms/content/sites/mainsite/FaqContent.html", data)
+
+@login_required(login_url='login')
+def site_view_main_contact(request):
+    data = {}
+    if TextContent.objects.filter(name="main_contact").exists():
+        data["textContent"] = TextContent.objects.get(name='main_contact')
+        
+    return render(request, "pages/cms/content/sites/mainsite/ContactContent.html", data)
+
+@login_required(login_url='login')
+def site_view_main_calculation(request):
+    data = {}
+    if TextContent.objects.filter(name="main_calculation").exists():
+        data["textContent"] = TextContent.objects.get(name='main_calculation')
+    if TextContent.objects.filter(name="main_calculation_card").exists():
+        data["cardContent"] = TextContent.objects.get(name='main_calculation_card')
+    if Galerie.objects.filter(place='main_calculation').exists():
+        data["calculationImages"] = Galerie.objects.get(place='main_calculation').images.all()
     return render(request, "pages/cms/content/sites/mainsite/CmsContent.html", data)
-
-@login_required(login_url='login')
-def site_view_main_price(request):
-    data = {}
-    if TextContent.objects.filter(name="main_price").exists():
-        data["textContent"] = TextContent.objects.get(name='main_price')
-    return render(request, "pages/cms/content/sites/mainsite/PriceContent.html", data)
-
-@login_required(login_url='login')
-def site_view_main_team(request):
-    data = {}
-    if TextContent.objects.filter(name="main_team").exists():
-        data["textContent"] = TextContent.objects.get(name='main_team')
-
-    return render(request, "pages/cms/content/sites/mainsite/TeamContent.html", data)
-
 
 @login_required(login_url='login')
 def saveTextContent(request):
