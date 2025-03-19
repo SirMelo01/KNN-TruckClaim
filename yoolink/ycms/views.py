@@ -749,8 +749,8 @@ def site_view_main_calculation(request):
         data["textContent"] = TextContent.objects.get(name='main_calculation')
     if TextContent.objects.filter(name="main_calculation_card").exists():
         data["cardContent"] = TextContent.objects.get(name='main_calculation_card')
-    if Galerie.objects.filter(place='main_calculation').exists():
-        data["calculationImages"] = Galerie.objects.get(place='main_calculation').images.all()
+    if fileentry.objects.filter(place='main_calculation').exists():
+        data["calculationImage"] = fileentry.objects.get(place='main_calculation')
     return render(request, "pages/cms/content/sites/mainsite/CmsContent.html", data)
 
 @login_required(login_url='login')

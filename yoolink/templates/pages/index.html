@@ -118,35 +118,14 @@
           <div class="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
              <div
                 class="relative flex flex-col bg-clip-border bg-white text-gray-700 shadow-lg border shadow-gray-500/10 rounded-lg">
-                <div class="mt-4 mx-4 rounded-2xl overflow-hidden bg-white text-gray-700 shadow-lg h-60">
-                  <div class="swiper mySwiper container mx-auto max-w-lg w-full px-2 md:px-0 rounded-2xl h-full">
-                      <div class="swiper-wrapper h-full">
-                        {% if calculationImages %}
-                           {% for img in calculationImages %}
-                           <div class="swiper-slide rounded-2xl h-full flex items-center">
-                              <img src="{{img.upload.url}}" alt="{{img.title}}" class="w-full h-full object-cover rounded-2xl">
-                           </div>
-                           {% endfor %}
-                        {% else %}
-                        <div class="swiper-slide rounded-2xl h-full flex items-center">
-                           <img src="https://placehold.co/900x600" alt="Bild 1" class="w-full h-full object-cover rounded-2xl">
-                       </div>
-                       <div class="swiper-slide rounded-2xl h-full flex items-center">
-                           <img src="https://placehold.co/900x600?text=Bild+2" alt="Bild 2" class="w-full h-full object-cover rounded-2xl">
-                       </div>
-                       <div class="swiper-slide rounded-2xl h-full flex items-center">
-                           <img src="https://placehold.co/900x600?text=Bild+3" alt="Bild 3" class="w-full h-full object-cover rounded-2xl">
-                       </div>
-                        {% endif %}
-                          
-                      </div>
-                      <!-- Navigationspfeile -->
-                      <div class="swiper-button-next"></div>
-                      <div class="swiper-button-prev"></div>
-                      <!-- Pagination -->
-                      <div class="swiper-pagination"></div>
-                  </div>
-              </div>            
+                  <div
+                     class="bg-clip-border mt-4 mx-4 rounded-xl overflow-hidden bg-white text-gray-700 shadow-lg relative h-56">
+                     <img 
+                        alt="{% if calculationImage %}{{calculationImage.title}}{% endif %}"
+                        title="{% if calculationImage %}{{calculationImage.title}}{% endif %}" 
+                           src="{% if calculationImage %}{{calculationImage.file.url}}{% else %}https://placehold.co/900x600{% endif %}" 
+                           class="h-full w-full object-cover">
+                  </div>           
                 <div class="p-6">
                    <p class="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal">
                      {% if calculationCardText %}{{ calculationCardText.header }}{% else %}Compensation Eligibility{% endif %}</p>
@@ -293,8 +272,6 @@
        
     </form>
  </section>
-
-
 
  <section itemscope itemtype="https://schema.org/FAQPage" class="relative bg-white py-24 px-4">
     <div class="container mx-auto">

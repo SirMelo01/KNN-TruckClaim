@@ -2,17 +2,9 @@
 {% load compress static %}
 {% block title %} {{block.super}} | CMS - Seiteninhalt {% endblock %}
 
-<!-- Needed for Galery (Slick) -->
-{% block javascript %}
-<!-- Add the slick-theme.css if you want default styling -->
-<link rel="stylesheet" type="text/css" href="{% static 'css/cms/slick/slick-carousel.css' %}" />
-<!-- Add the slick-theme.css if you want default styling -->
-<link rel="stylesheet" type="text/css" href="{% static 'css/cms/slick/slick-theme.css' %}" />
-{% endblock %}
-
 {% block content %}
 
-{% include "pages/cms/components/GalerySelectModal.html" %}
+{% include "pages/cms/components/ImageSelectModal.html" %}
 
 <div class="container mx-auto mt-8">
     <div class="flex justify-between">
@@ -57,31 +49,15 @@
             </div>
             <div class="mx-auto flex w-full justify-center px-4">
                 <div class="relative flex flex-col bg-clip-border bg-white text-gray-700 shadow-lg border shadow-gray-500/10 rounded-lg text-content" key="main_calculation_card">
-                    <span class="absolute top-0 left-0 inline-block px-2 py-1 text-sm font-semibold text-white bg-orange-500 rounded-full not-sortable z-40 hover:cursor-pointer edit-galery">
-                        <i class="bi bi-pencil-square"></i>
-                    </span>
-                    <!-- Slick-Galerie -->
-                    <div class="rounded-2xl overflow-hidden bg-white text-gray-700 shadow-lg m-2 galery-container" galery-id="-1" key="main_calculation">
-                        <div class="carousel container mx-auto max-w-lg w-full px-2 md:px-0 rounded-2xl h-60">
-                            {% if calculationImages %}
-                            {% for img in calculationImages %}
-                            <div>
-                                <img src="{{img.upload.url}}" alt="{{img.title}}" class="w-full rounded-2xl h-60 object-cover">
-                            </div>
-                            {% endfor %}
-                            {% else %}
-                            <div>
-                                <img src="https://placehold.co/900x600" alt="Bild 1" class="w-full rounded-2xl h-60 object-cover">
-                            </div>
-                            <div>
-                                <img src="https://placehold.co/900x600?text=Bild+2" alt="Bild 2" class="w-full rounded-2xl h-60 object-cover">
-                            </div>
-                            <div>
-                                <img src="https://placehold.co/900x600?text=Bild+3" alt="Bild 3" class="w-full rounded-2xl h-60 object-cover">
-                            </div>
-                            {% endif %}
-                        </div>
-                    </div>
+                    <div
+                        class="bg-clip-border mt-4 mx-4 rounded-xl overflow-hidden bg-white text-gray-700 shadow-lg relative h-56 relativ">
+                        <span class="absolute top-0 left-0 inline-block px-2 py-1 text-sm font-semibold text-white bg-orange-500 rounded-full not-sortable z-40 hover:cursor-pointer edit-img"><i class="bi bi-pencil-square"></i></span>
+                        <img alt="Card Image" 
+                            imgId="{% if calculationImage %}{{calculationImagem.id}}{% endif %}"
+                            src="{% if calculationImage %}{{calculationImage.id}}{% else %}https://placehold.co/900x600{% endif %}" 
+                            class="h-full w-full object-cover content-image" 
+                            key="main_calculation">
+                    </div>  
                     
                     <!-- Inhalt -->
                     <div class="p-6">

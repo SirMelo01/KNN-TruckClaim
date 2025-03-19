@@ -67,8 +67,8 @@ def load_index(request):
         context["contactText"] = TextContent.objects.get(name='main_contact')
 
     # Galery
-    if Galerie.objects.filter(place='main_calculation').exists():
-        context["calculationImages"] = Galerie.objects.get(place='main_calculation').images.all()
+    if fileentry.objects.filter(place='main_calculation').exists():
+        context["calculationImage"] = fileentry.objects.get(place='main_calculation')
     
     # Mitarbeiter
     active_team_members = TeamMember.objects.filter(active=True)
