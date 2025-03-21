@@ -1770,6 +1770,9 @@ def email_send(request):
         # Nachricht speichern
         message = Message.objects.create(name=name, message=message_text, email=email, title=title)
 
+        # Einstellungen für das Senden der E-Mail
+        user_settings = UserSettings.objects.filter(user__is_staff=False).first()
+
         # Email an Unternehmen senden
         subject_company = "Neue Nachricht in Ihrem CMS"
         message_name = user_settings.full_name or "Team"
@@ -1779,8 +1782,6 @@ def email_send(request):
         message_company += "Bitte antworten Sie nicht auf diese Email.\n"
         message_company += "Vielen Dank!\n\nMit freundlichen Grüßen,\nIhr YooLink"
 
-        # Einstellungen für das Senden der E-Mail
-        user_settings = UserSettings.objects.filter(user__is_staff=False).first()
         send_mail(
             subject_company,
             message_company,
