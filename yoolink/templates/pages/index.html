@@ -106,9 +106,10 @@
                 recover what is rightfully theirs.
                 By joining our claim, you benefit from a risk-free process with no financial burden – we only
                 succeed if you do.{% endif %}</p>
-             <button
+             <a
+               href="#contact"
                 class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
-                type="button">{% if calculationText %}{{ calculationText.buttonText }}{% else %}Start your claim today{% endif %}</button>
+                type="button">{% if calculationText %}{{ calculationText.buttonText }}{% else %}Start your claim today{% endif %}</a>
           </div>
           <div class="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
              <div
@@ -211,7 +212,7 @@
     </div>
  </section>
 
- <section class="py-24">
+ <section id="contact" class="py-24">
     <div class="mx-auto w-full px-4 text-center lg:w-6/12">
       {% if contactText %}<p class="block antialiased font-sans text-xl leading-relaxed text-inherit font-semibold">{{contactText.header}}</p>{% endif %}
        <h2

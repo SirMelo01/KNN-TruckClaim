@@ -53,8 +53,8 @@
                         class="bg-clip-border mt-4 mx-4 rounded-xl overflow-hidden bg-white text-gray-700 shadow-lg relative h-56 relativ">
                         <span class="absolute top-0 left-0 inline-block px-2 py-1 text-sm font-semibold text-white bg-orange-500 rounded-full not-sortable z-40 hover:cursor-pointer edit-img"><i class="bi bi-pencil-square"></i></span>
                         <img alt="Card Image" 
-                            imgId="{% if calculationImage %}{{calculationImagem.id}}{% endif %}"
-                            src="{% if calculationImage %}{{calculationImage.id}}{% else %}https://placehold.co/900x600{% endif %}" 
+                            imgId="{% if calculationImage %}{{calculationImage.id}}{% endif %}"
+                            src="{% if calculationImage %}{{calculationImage.file.url}}{% else %}https://placehold.co/900x600{% endif %}" 
                             class="h-full w-full object-cover content-image" 
                             key="main_calculation">
                     </div>  
