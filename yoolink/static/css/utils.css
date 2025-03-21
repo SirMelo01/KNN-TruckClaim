@@ -1,6 +1,9 @@
 /* Alerts
 * @Aziz (https://codepen.io/EL_Aziz/pen/qBEyvMR) - MIT
 */
+
+.grecaptcha-badge { visibility: hidden; }
+
 #notify {
     position: fixed;
     z-index: 1000;

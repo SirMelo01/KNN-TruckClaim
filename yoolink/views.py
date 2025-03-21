@@ -76,6 +76,9 @@ def load_index(request):
 
     context.update(get_opening_hours())
 
+    form = ContactForm()
+    context['form'] = form
+
     lang = get_language_from_request(request)  # Browser-Sprache holen
     available_languages = dict(settings.LANGUAGES)  # Sprachen aus settings.py holen
     if lang not in available_languages:

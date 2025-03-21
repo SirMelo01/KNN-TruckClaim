@@ -1772,9 +1772,11 @@ def email_send(request):
 
         # Email an Unternehmen senden
         subject_company = "Neue Nachricht in Ihrem CMS"
-        message_company = f"Hallo Team,\n\n{name} ({email}) hat eine neue Anfrage gesendet:\n\n"
+        message_name = user_settings.full_name or "Team"
+        message_company = f"Hallo {message_name},\n\n{name} ({email}) hat eine neue Anfrage gesendet:\n\n"
         message_company += f"Betreff: {title}\n\n"
         message_company += f"Nachricht: {message.message}\n\n"
+        message_company += "Bitte antworten Sie nicht auf diese Email.\n"
         message_company += "Vielen Dank!\n\nMit freundlichen Grüßen,\nIhr YooLink"
 
         # Einstellungen für das Senden der E-Mail

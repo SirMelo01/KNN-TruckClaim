@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 09:32+0000\n"
+"POT-Creation-Date: 2025-03-21 17:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,6 +46,46 @@ msgstr "Kontakt"
 msgid "CMS_TITLE_IMAGE"
 msgstr "Bilder"
 
+#: yoolink/templates/pages/index.html:12
+msgid "Bitte akzeptieren Sie die AGB, um fortzufahren."
+msgstr "Bitte akzeptieren Sie die AGB, um fortzufahren."
+
+#: yoolink/templates/pages/index.html:13
+msgid "Ihre Nachricht wurde erfolgreich gesendet"
+msgstr "Ihre Nachricht wurde erfolgreich gesendet"
+
+#: yoolink/templates/pages/index.html:14
+msgid "Etwas ist schief gelaufen. Versuchen Sie es bitte später nochmal."
+msgstr "Etwas ist schief gelaufen. Versuchen Sie es bitte später nochmal."
+
+#: yoolink/templates/pages/index.html:232
+msgid "CONTACT_FULL_NAME"
+msgstr "Ihr Name"
+
+#: yoolink/templates/pages/index.html:239
+msgid "CONTACT_EMAIL"
+msgstr "Ihre Email"
+
+#: yoolink/templates/pages/index.html:247
+msgid "CONTACT_TITLE"
+msgstr "Ihr Anliegen"
+
+#: yoolink/templates/pages/index.html:254
+msgid "CONTACT_MESSAGE"
+msgstr "Ihre Nachricht"
+
+#: yoolink/templates/pages/index.html:274
+msgid "CONTACT_TERMS_START"
+msgstr "Ich stimme den"
+
+#: yoolink/templates/pages/index.html:274
+msgid "CONTACT_TERMS_LINK"
+msgstr "Bedingungen"
+
+#: yoolink/templates/pages/index.html:274
+msgid "CONTACT_TERMS_END"
+msgstr " zu."
+
 #: yoolink/users/admin.py:17
 msgid "Personal info"
 msgstr ""
@@ -73,9 +113,6 @@ msgstr ""
 #: yoolink/users/views.py:23
 msgid "Information successfully updated"
 msgstr ""
-
-#~ msgid "FAQ_TITLE"
-#~ msgstr "Häufig gestellte Fragen"
 
 #~ msgid "FAQ_TEXT"
 #~ msgstr ""

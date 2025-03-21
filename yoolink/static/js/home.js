@@ -38,12 +38,12 @@ var csrfTokenInput = document.querySelector('input[name="csrfmiddlewaretoken"]')
 var csrfToken = csrfTokenInput ? csrfTokenInput.value : undefined;
 
 // JQuery functions
-$(document).ready(function() {
+$(document).ready(function () {
   // FAQ Toggle
-  $(".faq-toggle").click(function() {
+  $(".faq-toggle").click(function () {
     var content = $(this).siblings(".faq-content");
     var arrow = $(this).find(".faq-arrow");
-    
+
     if (content.hasClass("hidden")) {
       content.removeClass("hidden");
       arrow.addClass("rotate-180");
@@ -56,33 +56,41 @@ $(document).ready(function() {
    * Email Form submit Function (index page)
    * How to use: Compare wukschweiss project
    */
-  $('#emailForm').submit(function(event) {
+  $('#emailForm').submit(function (event) {
     event.preventDefault(); // Prevent the default form submission
-    var formData = {
-        name: $('#name').val(),
-        email: $('#email').val(),
-        title: $('#subject').val(),
-        message: $('#message').val(),
-        csrfmiddlewaretoken: csrftoken,
-    };
+    // Check if the Terms checkbox is checked
+    if (!$('#termsOfService').is(':checked')) {
+      sendNotif(window.translations.error_accept_terms, "error");
+      return;
+  }  
+    $('#bSendMail').prop('disabled', true);
+    console.log("Sende email...")
     // Send form data to the server using AJAX
-    $.ajax({
+    setTimeout(() => {
+      $.ajax({
         type: 'POST',
         url: '/cms/email/request/',
-        data: formData,
-        success: function(response) {
-            // Handle successful response here
-            if(response.success) {
-              sendNotif("Ihre Nachricht wurde erfolgreich gesendet", "success")
-            }
-            $('#emailForm')[0].reset();
+        data: $("#emailForm").serialize(),
+        success: function (response) {
+          // Handle successful response here
+          if (response.success) {
+            sendNotif(window.translations.success_message_sent, "success")
+          }
+          $('#emailForm')[0].reset();
         },
-        error: function(xhr, status, error) {
-            // Handle error response here
-            sendNotif("Etwas ist schief gelaufen. Versuchen Sie es bitte später nochmal.", "error")
+        error: function (error) {
+          // Handle error response here
+          console.error('Form submission failed');
+          sendNotif(window.translations.error_message_failed, "error")
+        },
+        complete: function () {
+          // Wird ausgeführt, egal ob Erfolg oder Fehler
+          $('#bSendMail').prop('disabled', false); // Button wieder aktivieren
         }
-    });
-});
+      });
+    }, 500)
+
+  });
 });
 
 // Commented because this website has no map

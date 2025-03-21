@@ -189,7 +189,7 @@ AWS_S3_OBJECT_PARAMETERS = {
 }
 # No Auth URL, so just .../media/image.png
 AWS_QUERYSTRING_AUTH = False
-AWS_STORAGE_BUCKET_NAME='knntruck'
+AWS_STORAGE_BUCKET_NAME='yoolink'
 AWS_S3_ENDPOINT_URL='https://fra1.digitaloceanspaces.com/'
 AWS_LOCATION = 'https://yoolink.fra1.digitaloceanspaces.com/'
 
