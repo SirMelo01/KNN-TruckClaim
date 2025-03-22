@@ -12,14 +12,12 @@ from django.contrib.staticfiles.storage import staticfiles_storage
 from django.urls import path, include
 
 from django.contrib.sitemaps.views import sitemap
-from yoolink.sitemaps import StaticViewSitemap, BlogSitemap, ProductSitemap
+from yoolink.sitemaps import StaticViewSitemap
 
 from yoolink.ycms.views import cart_verify_success_view, cart_view, order_verify_success_view, order_verify_view
 
 sitemaps = {
     'static': StaticViewSitemap,
-    'blog': BlogSitemap,
-    'product': ProductSitemap,
 }
 
 urlpatterns = [
@@ -33,7 +31,7 @@ urlpatterns = [
     path("datenschutz/", TemplateView.as_view(template_name="pages/datenschutz.html"), name="datenschutz"),
     path("cookies/", TemplateView.as_view(template_name="pages/cookies.html"), name="cookies"),
     path("cms/", include("yoolink.ycms.urls", namespace="ycms")),
-    path("blog/", include("yoolink.blog.urls", namespace="blog")),
+
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
