@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-22 09:07+0000\n"
+"POT-Creation-Date: 2025-03-22 12:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,57 +26,53 @@ msgstr "Deutsch"
 msgid "Englisch"
 msgstr "Englisch"
 
-#: yoolink/templates/base.html:170
+#: yoolink/templates/base.html:169 yoolink/templates/base.html:235
 msgid "NAVBAR_HOME"
 msgstr "Start"
 
-#: yoolink/templates/base.html:174
+#: yoolink/templates/base.html:173 yoolink/templates/base.html:236
 msgid "NAVBAR_SERVICES"
 msgstr "Leistungen"
 
-#: yoolink/templates/base.html:177
+#: yoolink/templates/base.html:176 yoolink/templates/base.html:237
 msgid "NAVBAR_FAQ"
 msgstr "FAQ"
 
-#: yoolink/templates/base.html:180
+#: yoolink/templates/base.html:179 yoolink/templates/base.html:238
 msgid "NAVBAR_CONTACT"
 msgstr "Kontakt"
 
-#: yoolink/templates/base.html:456
+#: yoolink/templates/base.html:455
 msgid "USEFUL_LINKS"
 msgstr "Links"
 
-#: yoolink/templates/base.html:459
+#: yoolink/templates/base.html:458
 msgid "FOOTER_HOME"
-msgstr "Home"
+msgstr "Start"
 
-#: yoolink/templates/base.html:461
+#: yoolink/templates/base.html:460
 msgid "FOOTER_CONTACT"
 msgstr "Kontakt"
 
-#: yoolink/templates/base.html:465
-msgid "FOOTER_CALCULATION"
-msgstr "Rechnung"
+#: yoolink/templates/base.html:464
+msgid "FOOTER_SERVICES"
+msgstr "Leistungen"
 
-#: yoolink/templates/base.html:472
+#: yoolink/templates/base.html:471
 msgid "OTHER_RESOURCES"
 msgstr "Andere Resourcen"
 
-#: yoolink/templates/base.html:476
+#: yoolink/templates/base.html:475
 msgid "FOOTER_IMPRESSUM"
 msgstr "Impressum"
 
-#: yoolink/templates/base.html:479
+#: yoolink/templates/base.html:478
 msgid "FOOTER_DATENSCHUTZ"
 msgstr "Datenschutz"
 
-#: yoolink/templates/base.html:483
+#: yoolink/templates/base.html:482
 msgid "FOOTER_COOKIES"
 msgstr "Cookies"
-
-#: yoolink/templates/base.html:485
-msgid "FOOTER_SITEMAP"
-msgstr "Sitemap"
 
 #: yoolink/templates/pages/cms/cms.html:14
 msgid "CMS_TITLE_IMAGE"

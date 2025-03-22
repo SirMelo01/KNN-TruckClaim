@@ -59,7 +59,7 @@
     <div class="container absolute left-2/4 z-10 mx-auto -translate-x-2/4 p-4">
       <nav class="block w-full max-w-screen-2xl rounded-xl bg-transparent text-white shadow-none p-3">
          <div class="container mx-auto flex items-center justify-between text-white">
-            <a href="#/" class="flex flex-col items-center">
+            <a href="{% url 'home' %}" class="flex flex-col items-center">
                <svg class="h-20 w-20 mr-2" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                   <g transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)" stroke="none">
                      <path d="M4542 8704 c-13 -10 -14 -219 -8 -1800 5 -1186 10 -1790 17 -1795 25
@@ -166,17 +166,17 @@
                <ul
                   class="mb-4 mt-2 flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-8">
                   <li class="block antialiased font-sans text-sm font-light leading-normal text-inherit capitalize">
-                     <a class="flex items-center gap-1 p-1 font-bold hover-overline-animation" href="#/hero">{% trans "NAVBAR_HOME" %}</a>
+                     <a class="flex items-center gap-1 p-1 font-bold hover-overline-animation" href="{% url 'home' %}">{% trans "NAVBAR_HOME" %}</a>
                   </li>
                   <li class="block antialiased font-sans text-sm font-light leading-normal text-inherit capitalize">
                      <a class="flex items-center gap-1 p-1 font-bold hover-overline-animation"
-                        href="#/services">{% trans "NAVBAR_SERVICES" %}</a>
+                        href="{% url 'home' %}#services">{% trans "NAVBAR_SERVICES" %}</a>
                   </li>
                   <li class="block antialiased font-sans text-sm font-light leading-normal text-inherit capitalize">
-                     <a class="flex items-center gap-1 p-1 font-bold hover-overline-animation" href="#/faq">{% trans "NAVBAR_FAQ" %}</a>
+                     <a class="flex items-center gap-1 p-1 font-bold hover-overline-animation" href="{% url 'home' %}#faq">{% trans "NAVBAR_FAQ" %}</a>
                   </li>
                   <li class="block antialiased font-sans text-sm font-light leading-normal text-inherit capitalize">
-                     <a class="flex items-center gap-1 p-1 font-bold hover-overline-animation" href="#/sign-up">{% trans "NAVBAR_CONTACT" %}</a>
+                     <a class="flex items-center gap-1 p-1 font-bold hover-overline-animation" href="{% url 'home' %}#contact">{% trans "NAVBAR_CONTACT" %}</a>
                   </li>
                </ul>
             </div>
@@ -232,10 +232,10 @@
       </button>
       <!-- Menü-Links -->
       <ul class="text-xl space-y-10 font-semibold flex justify-center items-center flex-col">
-         <li><a href="#" class="text-xl font-normal py-2 hover:text-blue-600">Zuhause</a></li>
-         <li><a href="#" class="text-xl font-normal py-2 hover:text-blue-600">Leistungen</a></li>
-         <li><a href="#" class="text-xl font-normal py-2 hover:text-blue-600">Leistungen</a></li>
-         <li><a href="#" class="text-xl font-normal py-2 hover:text-blue-600">Leistungen</a></li>
+         <li><a href="{% url 'home' %}" class="text-xl font-normal py-2 hover:text-blue-600">{% trans "NAVBAR_HOME" %}</a></li>
+         <li><a href="{% url 'home' %}#services" class="text-xl font-normal py-2 hover:text-blue-600">{% trans "NAVBAR_SERVICES" %}</a></li>
+         <li><a href="{% url 'home' %}#faq" class="text-xl font-normal py-2 hover:text-blue-600">{% trans "NAVBAR_FAQ" %}</a></li>
+         <li><a href="{% url 'home' %}#contact" class="text-xl font-normal py-2 hover:text-blue-600">{% trans "NAVBAR_CONTACT" %}</a></li>
       </ul>
       <!-- Sprache Button -->
       <div class="relative block lg:hidden text-left mt-8">
@@ -454,14 +454,14 @@
                         class="antialiased font-sans text-sm leading-normal text-blue-gray-900 mb-2 block font-medium uppercase">
                         {% trans "USEFUL_LINKS" %}</p>
                      <ul class="mt-3">
-                        <li><a href="/"  rel="noreferrer"
+                        <li><a href="{% url 'home' %}"  rel="noreferrer"
                               class="antialiased font-sans text-sm leading-normal mb-2 block font-normal text-blue-gray-500 hover-underline-animation-dark">{% trans "FOOTER_HOME" %}</a></li>
-                        <li><a href="/#contact" rel="noreferrer"
+                        <li><a href="{% url 'home' %}#contact" rel="noreferrer"
                               class="antialiased font-sans text-sm leading-normal mb-2 block font-normal text-blue-gray-500 hover-underline-animation-dark">{% trans "FOOTER_CONTACT" %}</a>
                         </li>
-                        <li><a href="/#calculation"
+                        <li><a href="{% url 'home' %}#services"
                               rel="noreferrer"
-                              class="antialiased font-sans text-sm leading-normal mb-2 block font-normal text-blue-gray-500 hover-underline-animation-dark">{% trans "FOOTER_CALCULATION" %}</a>
+                              class="antialiased font-sans text-sm leading-normal mb-2 block font-normal text-blue-gray-500 hover-underline-animation-dark">{% trans "FOOTER_SERVICES" %}</a>
                         </li>
                      </ul>
                   </div>
@@ -480,8 +480,6 @@
                         <li><a href="{% url 'cookies' %}"
                                rel="noreferrer"
                               class="antialiased font-sans text-sm leading-normal mb-2 block font-normal text-blue-gray-500 hover-underline-animation-dark">{% trans "FOOTER_COOKIES" %}</a></li>
-                        <li><a href="{% url 'django.contrib.sitemaps.views.sitemap' %}"  rel="noreferrer"
-                              class="antialiased font-sans text-sm leading-normal mb-2 block font-normal text-blue-gray-500 hover-underline-animation-dark">{% trans "FOOTER_SITEMAP" %}</a></li>
                      </ul>
                   </div>
                </div>
