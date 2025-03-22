@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-21 17:45+0000\n"
+"POT-Creation-Date: 2025-03-22 09:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,21 +26,57 @@ msgstr "Deutsch"
 msgid "Englisch"
 msgstr "Englisch"
 
-#: yoolink/templates/base.html:168
+#: yoolink/templates/base.html:170
 msgid "NAVBAR_HOME"
 msgstr "Start"
 
-#: yoolink/templates/base.html:172
+#: yoolink/templates/base.html:174
 msgid "NAVBAR_SERVICES"
 msgstr "Leistungen"
 
-#: yoolink/templates/base.html:175
+#: yoolink/templates/base.html:177
 msgid "NAVBAR_FAQ"
 msgstr "FAQ"
 
-#: yoolink/templates/base.html:178
+#: yoolink/templates/base.html:180
 msgid "NAVBAR_CONTACT"
 msgstr "Kontakt"
+
+#: yoolink/templates/base.html:456
+msgid "USEFUL_LINKS"
+msgstr "Links"
+
+#: yoolink/templates/base.html:459
+msgid "FOOTER_HOME"
+msgstr "Home"
+
+#: yoolink/templates/base.html:461
+msgid "FOOTER_CONTACT"
+msgstr "Kontakt"
+
+#: yoolink/templates/base.html:465
+msgid "FOOTER_CALCULATION"
+msgstr "Rechnung"
+
+#: yoolink/templates/base.html:472
+msgid "OTHER_RESOURCES"
+msgstr "Andere Resourcen"
+
+#: yoolink/templates/base.html:476
+msgid "FOOTER_IMPRESSUM"
+msgstr "Impressum"
+
+#: yoolink/templates/base.html:479
+msgid "FOOTER_DATENSCHUTZ"
+msgstr "Datenschutz"
+
+#: yoolink/templates/base.html:483
+msgid "FOOTER_COOKIES"
+msgstr "Cookies"
+
+#: yoolink/templates/base.html:485
+msgid "FOOTER_SITEMAP"
+msgstr "Sitemap"
 
 #: yoolink/templates/pages/cms/cms.html:14
 msgid "CMS_TITLE_IMAGE"
@@ -58,31 +94,31 @@ msgstr "Ihre Nachricht wurde erfolgreich gesendet"
 msgid "Etwas ist schief gelaufen. Versuchen Sie es bitte später nochmal."
 msgstr "Etwas ist schief gelaufen. Versuchen Sie es bitte später nochmal."
 
-#: yoolink/templates/pages/index.html:232
+#: yoolink/templates/pages/index.html:240
 msgid "CONTACT_FULL_NAME"
 msgstr "Ihr Name"
 
-#: yoolink/templates/pages/index.html:239
+#: yoolink/templates/pages/index.html:248
 msgid "CONTACT_EMAIL"
 msgstr "Ihre Email"
 
-#: yoolink/templates/pages/index.html:247
+#: yoolink/templates/pages/index.html:257
 msgid "CONTACT_TITLE"
 msgstr "Ihr Anliegen"
 
-#: yoolink/templates/pages/index.html:254
+#: yoolink/templates/pages/index.html:265
 msgid "CONTACT_MESSAGE"
 msgstr "Ihre Nachricht"
 
-#: yoolink/templates/pages/index.html:274
+#: yoolink/templates/pages/index.html:285
 msgid "CONTACT_TERMS_START"
 msgstr "Ich stimme den"
 
-#: yoolink/templates/pages/index.html:274
+#: yoolink/templates/pages/index.html:285
 msgid "CONTACT_TERMS_LINK"
 msgstr "Bedingungen"
 
-#: yoolink/templates/pages/index.html:274
+#: yoolink/templates/pages/index.html:285
 msgid "CONTACT_TERMS_END"
 msgstr " zu."
 

@@ -48,6 +48,7 @@ urlpatterns = [
     path('seiten/hauptseite/FAQ/', views.site_view_main_faq, name='site_hauptseite_faq'),
     path('seiten/hauptseite/Contact/', views.site_view_main_contact, name='site_hauptseite_contact'),
     path('seiten/hauptseite/Calculation/', views.site_view_main_calculation, name='site_hauptseite_calculation'),
+    path('seiten/hauptseite/Footer/', views.site_view_main_footer, name='site_hauptseite_footer'),
     
     # Products
     path('products/', views.product_view, name='products'),

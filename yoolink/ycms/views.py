@@ -754,6 +754,14 @@ def site_view_main_calculation(request):
     return render(request, "pages/cms/content/sites/mainsite/CmsContent.html", data)
 
 @login_required(login_url='login')
+def site_view_main_footer(request):
+    data = {}
+    if TextContent.objects.filter(name="footer").exists():
+        data["textContent"] = TextContent.objects.get(name='footer')
+        
+    return render(request, "pages/cms/content/sites/footer/FooterContent.html", data)
+
+@login_required(login_url='login')
 def saveTextContent(request):
     if request.method == 'POST':
         lang = get_active_language(request)

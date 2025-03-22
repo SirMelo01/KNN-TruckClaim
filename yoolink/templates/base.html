@@ -1,4 +1,5 @@
-{% load static i18n compress%}<!DOCTYPE html>
+{% load static i18n compress%}
+<!DOCTYPE html>
 <html lang="de">
   <head>
     <meta charset="utf-8">
@@ -443,101 +444,44 @@
                         </p>
                      </a>
                   </div>
-
                   <p
-                     class="block antialiased font-sans text-base leading-relaxed font-normal text-blue-gray-500 lg:w-2/5">
-                     Maximize Your Truck Compensation. Hassle-Free Claims, Expert Support.</p>
-                  <div class="mx-auto mt-6 mb-8 flex justify-center gap-2 md:mb-0 lg:justify-start">
-                     <a href="https://www.twitter.com/creativetim" target="_blank" rel="noopener noreferrer">
-                        <button
-                           class="relative align-middle select-none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] text-xs text-blue-gray-900 shadow-blue-gray-500/10 hover:shadow-lg hover:shadow-blue-gray-500/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none rounded-full shadow-none bg-transparent"
-                           type="button">
-                           <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-                              <p class="block antialiased font-sans text-base font-light leading-relaxed text-gray-700">
-                                 <i class="fa-brands fa-twitter"></i>
-                              </p>
-                           </span>
-                        </button>
-                     </a>
-                     <a href="https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w" target="_blank"
-                        rel="noopener noreferrer">
-                        <button
-                           class="relative align-middle select-none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] text-xs text-blue-gray-900 shadow-blue-gray-500/10 hover:shadow-lg hover:shadow-blue-gray-500/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none rounded-full shadow-none bg-transparent"
-                           type="button">
-                           <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-                              <p class="block antialiased font-sans text-base font-light leading-relaxed text-gray-700">
-                                 <i class="fa-brands fa-youtube"></i>
-                              </p>
-                           </span>
-                        </button>
-                     </a>
-                     <a href="https://www.instagram.com/creativetimofficial/" target="_blank" rel="noopener noreferrer">
-                        <button
-                           class="relative align-middle select-none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] text-xs text-blue-gray-900 shadow-blue-gray-500/10 hover:shadow-lg hover:shadow-blue-gray-500/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none rounded-full shadow-none bg-transparent"
-                           type="button">
-                           <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-                              <p class="block antialiased font-sans text-base font-light leading-relaxed text-gray-700">
-                                 <i class="fa-brands fa-instagram"></i>
-                              </p>
-                           </span>
-                        </button>
-                     </a>
-                     <a href="https://github.com/creativetimofficial/material-tailwind" target="_blank"
-                        rel="noopener noreferrer">
-                        <button
-                           class="relative align-middle select-none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] text-xs text-blue-gray-900 shadow-blue-gray-500/10 hover:shadow-lg hover:shadow-blue-gray-500/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none rounded-full shadow-none bg-transparent"
-                           type="button">
-                           <span class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-                              <p class="block antialiased font-sans text-base font-light leading-relaxed text-black">
-                                 <i class="fa-brands fa-github"></i>
-                              </p>
-                           </span>
-                        </button>
-                     </a>
-                  </div>
+                     class="block antialiased font-sans text-base leading-relaxed font-normal text-blue-gray-500 lg:w-3/5">
+                     {% if footerText and footerText.description %} {{footerText.description}} {% else %}Maximize Your Truck Compensation. Hassle-Free Claims, Expert Support.{% endif %}</p>
                </div>
                <div class="mx-auto mt-12 grid w-max grid-cols-2 gap-24 lg:mt-0">
                   <div>
                      <p
                         class="antialiased font-sans text-sm leading-normal text-blue-gray-900 mb-2 block font-medium uppercase">
-                        useful links</p>
+                        {% trans "USEFUL_LINKS" %}</p>
                      <ul class="mt-3">
-                        <li><a href="https://www.creative-tim.com/presentation" target="_blank" rel="noreferrer"
-                              class="antialiased font-sans text-sm leading-normal mb-2 block font-normal text-blue-gray-500 hover-underline-animation-dark">About
-                              Us</a></li>
-                        <li><a href="https://www.creative-tim.com/blog" target="_blank" rel="noreferrer"
-                              class="antialiased font-sans text-sm leading-normal mb-2 block font-normal text-blue-gray-500 hover-underline-animation-dark">Blog</a>
+                        <li><a href="/"  rel="noreferrer"
+                              class="antialiased font-sans text-sm leading-normal mb-2 block font-normal text-blue-gray-500 hover-underline-animation-dark">{% trans "FOOTER_HOME" %}</a></li>
+                        <li><a href="/#contact" rel="noreferrer"
+                              class="antialiased font-sans text-sm leading-normal mb-2 block font-normal text-blue-gray-500 hover-underline-animation-dark">{% trans "FOOTER_CONTACT" %}</a>
                         </li>
-                        <li><a href="https://www.github.com/creativetimofficial/material-tailwind?ref=mtk"
-                              target="_blank" rel="noreferrer"
-                              class="antialiased font-sans text-sm leading-normal mb-2 block font-normal text-blue-gray-500 hover-underline-animation-dark">Github</a>
-                        </li>
-                        <li><a href="https://www.creative-tim.com/templates/free?ref=mtk" target="_blank"
+                        <li><a href="/#calculation"
                               rel="noreferrer"
-                              class="antialiased font-sans text-sm leading-normal mb-2 block font-normal text-blue-gray-500 hover-underline-animation-dark">Free
-                              Products</a></li>
+                              class="antialiased font-sans text-sm leading-normal mb-2 block font-normal text-blue-gray-500 hover-underline-animation-dark">{% trans "FOOTER_CALCULATION" %}</a>
+                        </li>
                      </ul>
                   </div>
                   <div>
                      <p
                         class="antialiased font-sans text-sm leading-normal text-blue-gray-900 mb-2 block font-medium uppercase">
-                        other resources</p>
+                        {% trans "OTHER_RESOURCES" %}</p>
                      <ul class="mt-3">
-                        <li><a href="https://github.com/creativetimofficial/material-tailwind/blob/main/LICENSE.md?ref=mtk"
-                              target="_blank" rel="noreferrer"
-                              class="antialiased font-sans text-sm leading-normal mb-2 block font-normal text-blue-gray-500 hover-underline-animation-dark">MIT
-                              License</a></li>
-                        <li><a href="https://github.com/creativetimofficial/material-tailwind/blob/main/CONTRIBUTING.md?ref=mtk"
-                              target="_blank" rel="noreferrer"
-                              class="antialiased font-sans text-sm leading-normal mb-2 block font-normal text-blue-gray-500 hover-underline-animation-dark">Contribute</a>
+                        <li><a href="{% url 'impressum' %}"
+                               rel="noreferrer"
+                              class="antialiased font-sans text-sm leading-normal mb-2 block font-normal text-blue-gray-500 hover-underline-animation-dark">{% trans "FOOTER_IMPRESSUM" %}</a></li>
+                        <li><a href="{% url 'datenschutz' %}"
+                               rel="noreferrer"
+                              class="antialiased font-sans text-sm leading-normal mb-2 block font-normal text-blue-gray-500 hover-underline-animation-dark">{% trans "FOOTER_DATENSCHUTZ" %}</a>
                         </li>
-                        <li><a href="https://github.com/creativetimofficial/material-tailwind/blob/main/CHANGELOG.md?ref=mtk"
-                              target="_blank" rel="noreferrer"
-                              class="antialiased font-sans text-sm leading-normal mb-2 block font-normal text-blue-gray-500 hover-underline-animation-dark">Change
-                              Log</a></li>
-                        <li><a href="https://creative-tim.com/contact-us?ref=mtk" target="_blank" rel="noreferrer"
-                              class="antialiased font-sans text-sm leading-normal mb-2 block font-normal text-blue-gray-500 hover-underline-animation-dark">Contact
-                              Us</a></li>
+                        <li><a href="{% url 'cookies' %}"
+                               rel="noreferrer"
+                              class="antialiased font-sans text-sm leading-normal mb-2 block font-normal text-blue-gray-500 hover-underline-animation-dark">{% trans "FOOTER_COOKIES" %}</a></li>
+                        <li><a href="{% url 'django.contrib.sitemaps.views.sitemap' %}"  rel="noreferrer"
+                              class="antialiased font-sans text-sm leading-normal mb-2 block font-normal text-blue-gray-500 hover-underline-animation-dark">{% trans "FOOTER_SITEMAP" %}</a></li>
                      </ul>
                   </div>
                </div>
@@ -546,7 +490,7 @@
             <div class="flex flex-wrap items-center justify-center md:justify-between">
                <div class="mx-auto w-full px-4 text-center">
                   <p class="block antialiased font-sans text-sm leading-normal font-normal text-blue-gray-500">
-                     © KNN Büroservice GmbH 2025. Designed and hosted by <a href="https://yoolink.de" target="_blank"
+                     © {% if owner_data.company_name %}{{owner_data.company_name}}{% else %}KNN Büroservice GmbH{% endif %} {% load tz %} {% now "Y" %}. Designed and hosted by <a href="https://yoolink.de" target="_blank"
                         class="text-blue-gray-500 transition-colors hover:text-blue-500">Yoolink</a>.</p>
                </div>
             </div>
