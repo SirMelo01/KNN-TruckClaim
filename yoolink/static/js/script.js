@@ -70,8 +70,11 @@ $(document).ready(function () {
     // Menü schließen
     $('#menu-toggle2').on('click', function () {
         closeMenu();
-    });    
+    });
     
+    $('.mobile-link').on('click', function(event) {
+        closeMenu();
+    });
 
     // Banner anzeigen, wenn der Bildschirm auf Desktop-Größe erweitert wird
     $(window).on('resize', function() {
